@@ -44,7 +44,7 @@ let make =
       ~onLoadEnd: option(EventTypes.t => unit)=?,
       ~onLoadStart: option(EventTypes.t => unit)=?,
       ~automaticallyAdjustContentInsets: option(bool)=?,
-      ~contentInsets: option(Types.insets)=?,
+      ~contentInset: option(Types.insets)=?,
       ~accessibilityLabel: option(string)=?,
       ~accessible: option(bool)=?,
       ~hitSlop: option(Types.insets)=?,
@@ -102,7 +102,7 @@ let make =
   <ReactNative.WebView
     ?source
     ?automaticallyAdjustContentInsets
-    contentInsets=?{Types.toEdgeInsets(contentInsets)}
+    contentInset=?{Types.toEdgeInsets(contentInset)}
     ?injectJavaScript
     ?injectedJavaScript
     ?mediaPlaybackRequiresUserAction
