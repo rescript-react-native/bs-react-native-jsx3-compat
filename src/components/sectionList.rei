@@ -23,32 +23,32 @@
   ]}
   */
 
-type renderBag('item) = {
+type renderBag('item, 'sectionData) = {
   item: 'item,
   index: int,
-  section: section('item),
+  section: section('item, 'sectionData),
   separators: {
     .
     "highlight": unit => unit,
     "unhighlight": unit => unit,
   },
 }
-and section('item) = {
+and section('item, 'sectionData) = {
   data: array('item),
   key: option(string),
-  renderItem: option(renderBag('item) => React.element),
+  renderItem: option(renderBag('item, 'sectionData) => React.element),
 };
 
 let section:
   (
     ~data: array('item),
     ~key: string=?,
-    ~renderItem: renderBag('item) => React.element=?,
+    ~renderItem: renderBag('item, 'sectionData) => React.element=?,
     unit
   ) =>
-  section('item);
+  section('item, 'sectionData);
 
-type sections('item);
+type sections('item, 'sectionData);
 
 /**
 {4 renderItem}
@@ -57,9 +57,10 @@ type sections('item);
   ]}
 */
 
-let sections: array(section('item)) => sections('item);
+let sections:
+  array(section('item, 'sectionData)) => sections('item, 'sectionData);
 
-type renderItem('item);
+type renderItem('item, 'sectionData);
 
 /**
   {4 keyExtractor}
@@ -73,18 +74,20 @@ type renderItem('item);
   reference:
 */
 
-let renderItem: (renderBag('item) => React.element) => renderItem('item);
+let renderItem:
+  (renderBag('item, 'sectionData) => React.element) =>
+  renderItem('item, 'sectionData);
 
-type separatorProps('item) = {
+type separatorProps('item, 'sectionData) = {
   highlighted: bool,
   leadingItem: option('item),
-  leadingSection: option(section('item)),
-  section: section('item),
+  leadingSection: option(section('item, 'sectionData)),
+  section: section('item, 'sectionData),
   trailingItem: option('item),
-  trailingSection: option(section('item)),
+  trailingSection: option(section('item, 'sectionData)),
 };
 
-type separatorComponent('item);
+type separatorComponent('item, 'sectionData);
 
 /**
   {4 listEmptyComponent}
@@ -147,15 +150,16 @@ type separatorComponent('item);
    */
 
 let separatorComponent:
-  (separatorProps('item) => React.element) => separatorComponent('item);
+  (separatorProps('item, 'sectionData) => React.element) =>
+  separatorComponent('item, 'sectionData);
 
-type viewToken('item) = {
+type viewToken('item, 'sectionData) = {
   .
   "index": Js.undefined(int),
   "isViewable": bool,
   "item": 'item,
   "key": string,
-  "section": section('item),
+  "section": section('item, 'sectionData),
 };
 
 /**
@@ -179,9 +183,11 @@ reference:
 ]}
  */
 
-type renderAccessory('item) = {section: section('item)};
+type renderAccessory('item, 'sectionData) = {
+  section: section('item, 'sectionData),
+};
 
-type renderAccessoryView('item);
+type renderAccessoryView('item, 'sectionData);
 
 /**
   {4 renderSectionFooter}
@@ -229,19 +235,28 @@ type renderAccessoryView('item);
 */
 
 let renderAccessoryView:
-  (renderAccessory('item) => React.element) => renderAccessoryView('item);
+  (renderAccessory('item, 'sectionData) => React.element) =>
+  renderAccessoryView('item, 'sectionData);
 
 [@react.component]
 let make:
   (
-    ~sections: array(ReactNative.VirtualizedSectionList.section('item)),
-    ~renderItem: ReactNative.VirtualizedSectionList.renderItemCallback('item),
+    ~sections: array(
+                 ReactNative.VirtualizedSectionList.section(
+                   'item,
+                   'sectionData,
+                 ),
+               ),
+    ~renderItem: ReactNative.VirtualizedSectionList.renderItemCallback(
+                   'item,
+                   'sectionData,
+                 ),
     ~keyExtractor: ('item, int) => string,
-    ~itemSeparatorComponent: separatorComponent('item)=?,
+    ~itemSeparatorComponent: separatorComponent('item, 'sectionData)=?,
     ~listEmptyComponent: React.element=?,
     ~listFooterComponent: React.element=?,
     ~listHeaderComponent: React.element=?,
-    ~sectionSeparatorComponent: separatorComponent('item)=?,
+    ~sectionSeparatorComponent: separatorComponent('item, 'sectionData)=?,
     ~inverted: bool=?,
     ~extraData: 'extraData=?,
     ~initialNumToRender: int=?,
@@ -256,10 +271,12 @@ let make:
     ~refreshing: bool=?,
     ~renderSectionHeader: ReactNative.VirtualizedSectionList.renderSectionHeaderCallback(
                             'item,
+                            'sectionData,
                           )
                             =?,
     ~renderSectionFooter: ReactNative.VirtualizedSectionList.renderSectionHeaderCallback(
                             'item,
+                            'sectionData,
                           )
                             =?,
     ~stickySectionHeadersEnabled: bool=?,
