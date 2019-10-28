@@ -47,7 +47,7 @@ let make:
     ~onLoadEnd: EventTypes.t => unit=?,
     ~onLoadStart: EventTypes.t => unit=?,
     ~automaticallyAdjustContentInsets: bool=?,
-    ~contentInsets: Types.insets=?,
+    ~contentInset: Types.insets=?,
     ~accessibilityLabel: string=?,
     ~accessible: bool=?,
     ~hitSlop: Types.insets=?,
