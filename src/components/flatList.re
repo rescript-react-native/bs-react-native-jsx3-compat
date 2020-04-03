@@ -78,7 +78,8 @@ let scrollToOffset = (ref, ~offset=?, ~animated=?, ()) =>
     },
   );
 
-[@bs.send] external recordInteraction: ReasonReact.reactRef => unit = "";
+[@bs.send]
+external recordInteraction: ReasonReact.reactRef => unit = "recordInteraction";
 
 type jsRenderBag('item) = {
   .

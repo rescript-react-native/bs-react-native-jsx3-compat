@@ -49,23 +49,24 @@ let effectiveConnectionType = effectiveConnectionType =>
 [@bs.module "react-native"] [@bs.scope "NetInfo"]
 external addEventListener:
   ([@bs.as "connectionChange"] _, info => unit) => unit =
-  "";
+  "addEventListener";
 
 [@bs.module "react-native"] [@bs.scope "NetInfo"]
 external removeEventListener:
   ([@bs.as "connectionChange"] _, info => unit) => unit =
-  "";
+  "removeEventListener";
 
 [@bs.module "react-native"] [@bs.scope "NetInfo"]
-external isConnectionExpensive: unit => Js.Promise.t(bool) = "";
+external isConnectionExpensive: unit => Js.Promise.t(bool) =
+  "isConnectionExpensive";
 
 [@bs.module "react-native"] [@bs.scope "NetInfo"]
-external getConnectionInfo: unit => Js.Promise.t(info) = "";
+external getConnectionInfo: unit => Js.Promise.t(info) = "getConnectionInfo";
 
 module IsConnected = {
   type t;
   [@bs.module "react-native"] [@bs.scope "NetInfo"] [@bs.val]
-  external isConnected: t = "";
+  external isConnected: t = "isConnected";
   [@bs.send.pipe: t]
   external _addEventListener:
     ([@bs.as "connectionChange"] _, bool => unit) => unit =

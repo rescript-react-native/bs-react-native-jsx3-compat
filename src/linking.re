@@ -18,8 +18,9 @@ let getInitialURL = () =>
      );
 
 [@bs.scope "Linking"] [@bs.module "react-native"]
-external addEventListener: (string, {. "url": string} => unit) => unit = "";
+external addEventListener: (string, {. "url": string} => unit) => unit =
+  "addEventListener";
 
 [@bs.scope "Linking"] [@bs.module "react-native"]
 external removeEventListener: (string, {. "url": string} => unit) => unit =
-  "";
+  "removeEventListener";

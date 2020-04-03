@@ -27,10 +27,11 @@ You can read more on [BackHandler] API usage in official docs: {{:https://facebo
 ]}
 */
 [@bs.scope "BackHandler"] [@bs.module "react-native"]
-external exitApp: unit => unit = "";
+external exitApp: unit => unit = "exitApp";
 
 [@bs.scope "BackHandler"] [@bs.module "react-native"]
-external addEventListener: (string, unit => bool) => unit = "";
+external addEventListener: (string, unit => bool) => unit = "addEventListener";
 
 [@bs.scope "BackHandler"] [@bs.module "react-native"]
-external removeEventListener: (string, unit => bool) => unit = "";
+external removeEventListener: (string, unit => bool) => unit =
+  "removeEventListener";

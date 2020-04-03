@@ -15,22 +15,20 @@ external sourceUri:
     ~body: string=?,
     unit
   ) =>
-  source =
-  "";
+  source;
 
 [@bs.obj]
-external sourceHtml: (~html: string=?, ~baseUrl: string=?, unit) => source =
-  "";
+external sourceHtml: (~html: string=?, ~baseUrl: string=?, unit) => source;
 
 let source = sourceUri;
 
-[@bs.send] external goForward: ReasonReact.reactRef => unit = "";
+[@bs.send] external goForward: ReasonReact.reactRef => unit = "goForward";
 
-[@bs.send] external goBack: ReasonReact.reactRef => unit = "";
+[@bs.send] external goBack: ReasonReact.reactRef => unit = "goBack";
 
-[@bs.send] external reload: ReasonReact.reactRef => unit = "";
+[@bs.send] external reload: ReasonReact.reactRef => unit = "reload";
 
-[@bs.send] external stopLoading: ReasonReact.reactRef => unit = "";
+[@bs.send] external stopLoading: ReasonReact.reactRef => unit = "stopLoading";
 
 [@react.component]
 let make =

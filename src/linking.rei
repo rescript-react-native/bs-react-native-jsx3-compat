@@ -33,8 +33,9 @@ external openURL: string => Js.Promise.t(unit) = "openURL";
 let getInitialURL: unit => Js.Promise.t(option(string));
 
 [@bs.scope "Linking"] [@bs.module "react-native"]
-external addEventListener: (string, {. "url": string} => unit) => unit = "";
+external addEventListener: (string, {. "url": string} => unit) => unit =
+  "addEventListener";
 
 [@bs.scope "Linking"] [@bs.module "react-native"]
 external removeEventListener: (string, {. "url": string} => unit) => unit =
-  "";
+  "removeEventListener";

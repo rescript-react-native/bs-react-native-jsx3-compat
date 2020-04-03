@@ -2,16 +2,17 @@ type t;
 
 module NativeEvent = {
   type t = ReactNative.Event.pressEvent;
-  [@bs.get] external changedTouches: t => array(Js.t({..})) = "";
-  [@bs.get] external identifier: t => int = "";
-  [@bs.get] external locationX: t => float = "";
-  [@bs.get] external locationY: t => float = "";
-  [@bs.get] external pageX: t => float = "";
-  [@bs.get] external pageY: t => float = "";
-  [@bs.get] external target: t => Js.t({..}) = "";
-  [@bs.get] external touches: t => array(Js.t({..})) = "";
-  [@bs.get] external timestamp: t => int = "";
-  [@bs.get] external data: t => string = "";
+  [@bs.get]
+  external changedTouches: t => array(Js.t({..})) = "changedTouches";
+  [@bs.get] external identifier: t => int = "identifier";
+  [@bs.get] external locationX: t => float = "locationX";
+  [@bs.get] external locationY: t => float = "locationY";
+  [@bs.get] external pageX: t => float = "pageX";
+  [@bs.get] external pageY: t => float = "pageY";
+  [@bs.get] external target: t => Js.t({..}) = "target";
+  [@bs.get] external touches: t => array(Js.t({..})) = "touches";
+  [@bs.get] external timestamp: t => int = "timestamp";
+  [@bs.get] external data: t => string = "data";
 };
 
 /*
@@ -70,7 +71,7 @@ module NativeScrollEvent = {
   };
 };
 
-[@bs.get] external nativeEvent: t => NativeEvent.t = "";
+[@bs.get] external nativeEvent: t => NativeEvent.t = "nativeEvent";
 
 [@bs.get] external nativeLayoutEvent: t => NativeLayoutEvent.t = "nativeEvent";
 

@@ -1,4 +1,4 @@
-[@bs.send] external setPage: (ReasonReact.reactRef, int) => unit = "";
+[@bs.send] external setPage: (ReasonReact.reactRef, int) => unit = "setPage";
 
 [@react.component]
 let make =

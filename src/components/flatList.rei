@@ -294,7 +294,7 @@ let scrollToOffset:
   {2 API reference}
   */
 [@bs.send]
-external recordInteraction: ReasonReact.reactRef => unit = "";
+external recordInteraction: ReasonReact.reactRef => unit = "recordInteraction";
 
 type renderBag('item) = {
   item: 'item,

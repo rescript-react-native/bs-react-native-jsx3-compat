@@ -117,7 +117,7 @@ external addEventListener:
     unit
   ) =>
   unit =
-  "";
+  "addEventListener";
 
 [@bs.scope "Dimensions"] [@bs.module "react-native"]
 external removeEventListener:
@@ -131,4 +131,4 @@ external removeEventListener:
     unit
   ) =>
   unit =
-  "";
+  "removeEventListener";
