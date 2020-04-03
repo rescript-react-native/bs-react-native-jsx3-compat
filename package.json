@@ -43,7 +43,7 @@
     "npmpub": "^5.0.0",
     "prettier": "^1.16.4",
     "reason-react": "^0.7.0",
-    "reason-react-native": "^0.60.1"
+    "reason-react-native": "^0.61.1"
   },
   "prettier": {
     "trailingComma": "all",

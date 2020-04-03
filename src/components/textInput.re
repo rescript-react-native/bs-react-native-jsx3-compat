@@ -140,7 +140,7 @@ let make =
     ) =>
   <ReactNative.TextInput
     ?autoCapitalize
-    ?autoComplete
+    autoCompleteType=?autoComplete
     ?autoCorrect
     ?autoFocus
     ?blurOnSubmit
