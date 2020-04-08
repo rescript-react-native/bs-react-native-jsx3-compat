@@ -1,10 +1,10 @@
-[@bs.send] external isFocused: ReasonReact.reactRef => bool = "";
+[@bs.send] external isFocused: ReasonReact.reactRef => bool = "isFocused";
 
-[@bs.send] external clear: ReasonReact.reactRef => unit = "";
+[@bs.send] external clear: ReasonReact.reactRef => unit = "clear";
 
-[@bs.send] external focus: ReasonReact.reactRef => unit = "";
+[@bs.send] external focus: ReasonReact.reactRef => unit = "focus";
 
-[@bs.send] external blur: ReasonReact.reactRef => unit = "";
+[@bs.send] external blur: ReasonReact.reactRef => unit = "blur";
 
 type editingEvent = ReactNative.TextInput.editingEvent;
 
@@ -140,7 +140,7 @@ let make =
     ) =>
   <ReactNative.TextInput
     ?autoCapitalize
-    ?autoComplete
+    autoCompleteType=?autoComplete
     ?autoCorrect
     ?autoFocus
     ?blurOnSubmit

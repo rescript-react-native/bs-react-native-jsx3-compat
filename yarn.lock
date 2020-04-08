@@ -991,10 +991,10 @@ braces@^2.3.1:
     split-string "^3.0.2"
     to-regex "^3.0.1"
 
-bs-platform@^5.0.4:
-  version "5.0.4"
-  resolved "https://registry.yarnpkg.com/bs-platform/-/bs-platform-5.0.4.tgz#d406ef43c12d1b19d8546884d8b5b4e0fb709372"
-  integrity sha512-rXM+ztN8wYXQ4ojfFGylvPOf8GRLOvM94QJsMMV9VpsLChKCjesWMNybTZvpoyNsESu2nC5q+C9soG+BPhuUFQ==
+bs-platform@^7.2.2:
+  version "7.2.2"
+  resolved "https://registry.yarnpkg.com/bs-platform/-/bs-platform-7.2.2.tgz#76fdc63e4889458ae3d257a0132107a792f2309c"
+  integrity sha512-PWcFfN+jCTtT/rMaHDhKh+W9RUTpaRunmSF9vbLYcrJbpgCNW6aFKAY33u0P3mLxwuhshN3b4FxqGUBPj6exZQ==
 
 btoa-lite@^1.0.0:
   version "1.0.0"
@@ -4379,10 +4379,10 @@ readjson@^1.1.0:
   dependencies:
     try-catch "^2.0.0"
 
-reason-react-native@^0.60.1:
-  version "0.60.1"
-  resolved "https://registry.yarnpkg.com/reason-react-native/-/reason-react-native-0.60.1.tgz#eb60dbed6a85ffc4805c08ab4d6a0b551c132c7f"
-  integrity sha512-XJJqG62LW9j7YstzAsD20S8t1kH3uVu19/PT5NByceCACq/8oClBLsFXHXhlPvVvdgKvydGjQo+mNb+JCoJ2Kw==
+reason-react-native@^0.61.1:
+  version "0.61.1"
+  resolved "https://registry.yarnpkg.com/reason-react-native/-/reason-react-native-0.61.1.tgz#fe5cac135a4ed0aacddf9162f532bde7d08781e0"
+  integrity sha512-ep9gThi4dz5CLXzFmNaj/6LgtIKQUbjY4mbYmH3pxnuojC0D7oG7q5GSm3CI8yk32Z+3liY0JrMOx+jVjsuomg==
 
 reason-react@^0.7.0:
   version "0.7.0"

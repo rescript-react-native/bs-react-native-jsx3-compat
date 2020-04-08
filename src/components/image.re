@@ -25,8 +25,7 @@ external _imageURISource:
     ~height: option(float)=?,
     unit
   ) =>
-  _imageURISource =
-  "";
+  _imageURISource;
 
 type imageURISource = ReactNative.Image.Source.t;
 let imageURISource =
@@ -71,8 +70,7 @@ external _defaultURISource:
     ~height: option(float)=?,
     unit
   ) =>
-  _defaultURISource =
-  "";
+  _defaultURISource;
 
 type defaultURISource;
 let defaultURISource = (~uri, ~scale=?, ~width=?, ~height=?, unit) =>
@@ -166,4 +164,4 @@ type asset = {
 type assetSource = [ | `URI(_imageURISource) | `Required(Packager.required)];
 
 [@bs.scope "Image"] [@bs.module "react-native"]
-external resolveAssetSource: assetSource => asset = "";
+external resolveAssetSource: assetSource => asset = "resolveAssetSource";

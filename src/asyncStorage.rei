@@ -124,7 +124,7 @@ let getAllKeys:
   Js.Promise.t(option(array(string)));
 
 [@bs.scope "AsyncStorage"] [@bs.module "react-native"]
-external flushGetRequests: unit => unit = "";
+external flushGetRequests: unit => unit = "flushGetRequests";
 
 let multiGet:
   (

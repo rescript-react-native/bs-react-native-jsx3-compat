@@ -16,7 +16,8 @@ let currentState = () => {
 };
 
 [@bs.scope "AppState"] [@bs.module "react-native"]
-external addEventListener: (string, unit => unit) => unit = "";
+external addEventListener: (string, unit => unit) => unit = "addEventListener";
 
 [@bs.scope "AppState"] [@bs.module "react-native"]
-external removeEventListener: (string, unit => unit) => unit = "";
+external removeEventListener: (string, unit => unit) => unit =
+  "removeEventListener";

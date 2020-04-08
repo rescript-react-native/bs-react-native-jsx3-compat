@@ -93,7 +93,7 @@ let getAllKeys = (~callback=?, ()) =>
   };
 
 [@bs.scope "AsyncStorage"] [@bs.module "react-native"]
-external flushGetRequests: unit => unit = "";
+external flushGetRequests: unit => unit = "flushGetRequests";
 
 [@bs.scope "AsyncStorage"] [@bs.module "react-native"]
 external _multiGet:
