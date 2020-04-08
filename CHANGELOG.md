@@ -1,5 +1,9 @@
 # bs-react-native-jsx3-compat CHANGELOG
 
+## 0.61.0 - 2020-04-08
+
+Update for `reason-react-native@^0.61.0`
+
 ## 0.11.2 - 2019-10-28
 
 Requires `reason-react-native@0.60.1`. Incudes fixes for WebView & SectionList.
