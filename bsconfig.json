@@ -16,6 +16,9 @@
       "subdirs": true
     }
   ],
-  "bsc-flags": ["-bs-no-version-header", "-warn-error @a", "-w -41-42-102-103"],
+  "bsc-flags": ["-bs-no-version-header", "-w -41-42-102-103"],
+  "warnings": {
+    "error": true
+  },
   "bs-dependencies": ["reason-react", "reason-react-native"]
 }
