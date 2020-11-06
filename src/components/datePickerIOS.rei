@@ -19,7 +19,7 @@
     };
   ]}
 
-  Here you can find BuckleScript's {{:https://bucklescript.github.io/bucklescript/api/Js_date.html} Js.Date API}
+  Here you can find ReScript / BuckleScript's {{:https://rescript-lang.org/docs/manual/latest/api/js/date} Js.Date API}
 
   {{:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date} The JavaScript Date API} might also be a useful resource.
 

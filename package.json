@@ -9,6 +9,7 @@
   "repository": "https://github.com/reason-react-native/bs-react-native-jsx3-compat.git",
   "license": "MIT",
   "keywords": [
+    "rescript",
     "reason",
     "reasonml",
     "bucklescript",
